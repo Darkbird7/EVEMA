@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: What EVEMA does and won't do
+    url: https://github.com/Darkbird7/EVEMA/blob/main/docs/what-evema-does.md
+    about: Check this before asking for a feature. Some things are deliberately out of scope.
+  - name: Download the latest release
+    url: https://github.com/Darkbird7/EVEMA/releases
+    about: Builds for Windows, macOS and Linux, with SHA256SUMS to check your download.

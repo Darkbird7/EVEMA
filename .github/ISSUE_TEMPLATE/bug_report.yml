@@ -1,0 +1,125 @@
+name: Bug report
+description: Something in EVEMA doesn't work, shows the wrong thing, or crashed.
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. If a change to your settings went wrong, you can undo it first: in **Local Files**, right-click the file and restore one of its backups.
+
+        **Please don't attach your `core_char_*.dat` / `core_user_*.dat` files here.** They're public once posted. If the bug needs one, say so and we'll sort out a private way to share it.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where in EVEMA?
+      options:
+        - Local Files - finding or listing files
+        - Local Files - preview (window layout, overview, brackets, ship labels, profile)
+        - Local Files - copy, section copy, export or import
+        - Local Files - editing (brackets, ship labels, overview options, window positions)
+        - Local Files - backups and restore
+        - Partnership
+        - Tools
+        - Settings
+        - Installing, starting or updating EVEMA
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you saw, including any error message (copy the text if you can).
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The clicks that lead to the problem, as exactly as you can.
+      placeholder: |
+        1. Select a character in Local Files
+        2. Right-click → Copy sections to → ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: eve-running
+    attributes:
+      label: Was the EVE client running at the time?
+      description: The client saves its settings when it logs out or closes, which can overwrite changes EVEMA just made. Knowing this helps a lot.
+      options:
+        - "No, every client was closed"
+        - "Yes, at least one client was open"
+        - "Not sure"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: EVEMA version
+      description: Shown in the About dialog (the icon in the title bar).
+      placeholder: e.g. 0.1.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS (Apple silicon)
+        - macOS (Intel)
+        - Linux
+    validations:
+      required: true
+
+  - type: dropdown
+    id: eve-setup
+    attributes:
+      label: How do you run EVE?
+      options:
+        - EVE launcher on Windows
+        - Steam on Windows
+        - Steam with Proton on Linux
+        - Wine or Lutris on Linux
+        - macOS client
+        - Other (say below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log excerpt
+      description: |
+        **Settings → Open Logs Folder**, open today's `evema-*.log`, and paste the lines from around the time of the problem.
+        Logs can contain character names, IDs and folder paths. Remove anything you'd rather not post.
+      render: text
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, how many characters and accounts are involved, or anything unusual about your setup.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched existing issues and this isn't already reported.
+          required: true

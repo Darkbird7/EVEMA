@@ -1,0 +1,67 @@
+name: Add a tool to the Tools catalog
+description: Suggest a community EVE tool to add as a built-in entry in the Tools tab.
+labels: ["tools-catalog"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The Tools tab manages tools you install and run as their own programs. EVEMA finds them, launches them and keeps them updated from their GitHub releases. It isn't a list of links, so websites and web apps are out of scope.
+
+        Remember that you can already add any program yourself with **Add…** in the Tools tab. This form is for tools worth adding as a built-in entry for everyone.
+
+  - type: input
+    id: name
+    attributes:
+      label: Tool name
+    validations:
+      required: true
+
+  - type: input
+    id: repo
+    attributes:
+      label: Source repository
+      description: The project's own repository, not a mirror or download site.
+      placeholder: https://github.com/owner/project
+    validations:
+      required: true
+
+  - type: dropdown
+    id: game-interaction
+    attributes:
+      label: What does it do to the game?
+      description: Pick the closest. Built-in entries show this label to users, so accuracy matters more than making it sound harmless.
+      options:
+        - Nothing, it's fully standalone (e.g. a fitting tool)
+        - Reads files the client writes (logs, settings)
+        - Arranges or previews game windows
+        - Hooks into or injects code into the client
+        - Not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Platforms it runs on
+      options:
+        - label: Windows
+        - label: macOS
+        - label: Linux
+
+  - type: input
+    id: asset
+    attributes:
+      label: Release file name
+      description: The file name of the download on its releases page, if you know it. For example, `EVE-O.Preview.zip`.
+
+  - type: input
+    id: license
+    attributes:
+      label: License
+      placeholder: e.g. MIT, GPL-3.0
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it's worth including
+      description: Who uses it, whether it's actively maintained, and anything users should know.

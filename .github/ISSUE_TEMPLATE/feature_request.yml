@@ -1,0 +1,54 @@
+name: Feature request
+description: Suggest something EVEMA should do, or do better.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before you ask, please read [what EVEMA does and won't do](https://github.com/Darkbird7/EVEMA/blob/main/docs/what-evema-does.md). Requests that need EVEMA to modify the client, read its memory or network traffic, automate input, or log in as you will be closed, however useful they'd be.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the task or annoyance, not the solution yet. For example, "every time I add an alt I spend 20 minutes redoing its overview".
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+      description: How you picture EVEMA helping. Rough ideas are fine.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of EVEMA?
+      options:
+        - Local Files (settings files, copying, editing, backups)
+        - Partnership
+        - Tools
+        - Settings
+        - Something new
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scale
+    attributes:
+      label: How many characters do you usually manage?
+      description: This helps us understand who a feature is for.
+      options:
+        - "1-3"
+        - "4-10"
+        - "11-30"
+        - "More than 30"
+
+  - type: textarea
+    id: today
+    attributes:
+      label: How do you do this today?
+      description: Another tool, a script, by hand in game? Links welcome.

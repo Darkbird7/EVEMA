@@ -1,0 +1,49 @@
+EVEMA End User License Agreement
+
+Copyright (c) 2026 Darkbird. All rights reserved.
+
+EVEMA is freeware. By installing, copying or using it you agree to these terms.
+If you don't agree, don't use it.
+
+1. License. You may download EVEMA from its official releases page
+   (https://github.com/Darkbird7/EVEMA/releases) and use it, free of charge, on
+   any number of computers you own or control.
+
+2. Restrictions. You may not:
+   a. modify, adapt or translate EVEMA, or make works based on it;
+   b. reverse engineer, decompile or disassemble EVEMA, except to the extent
+      applicable law expressly permits this despite this restriction;
+   c. distribute, re-host, sell, rent, lend or sublicense EVEMA, or bundle it
+      with other software; share the link to the official releases page
+      instead;
+   d. remove or alter any copyright notice, license or attribution in it.
+
+3. Third-party and open-source components. EVEMA includes components that are
+   licensed separately, including the BlueMarshal library. Those components are
+   covered by their own licenses, listed in THIRD-PARTY-NOTICES.md, and nothing
+   in this agreement limits the rights those licenses give you.
+
+4. Ownership. EVEMA is licensed, not sold. All rights not expressly granted
+   here are reserved.
+
+5. No affiliation. EVE Online and all related logos and images are trademarks
+   of Fenris Creations (formerly CCP hf.). EVEMA is a fan-made tool and is not
+   affiliated with, endorsed by, or sponsored by Fenris Creations.
+
+6. No warranty. EVEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. You
+   use it at your own risk, including the risk of changes to your EVE Online
+   settings files; EVEMA backs files up before writing them, but keep your own
+   backups of anything you can't afford to lose.
+
+7. Limitation of liability. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+   CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+   OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH EVEMA OR THE USE OF OR
+   OTHER DEALINGS IN IT.
+
+8. Termination. This license ends automatically if you break any of these
+   terms. When it ends, stop using EVEMA and delete your copies.
+
+9. Changes. Later versions of EVEMA may come with different terms. The terms
+   shipped with a copy of EVEMA are the ones that apply to that copy.
