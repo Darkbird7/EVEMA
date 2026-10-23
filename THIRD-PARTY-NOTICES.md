@@ -56,7 +56,9 @@ not affiliated with, endorsed by, or sponsored by Fenris Creations (formerly CCP
 [`TrueBrain/blue-marshal-rs`](https://github.com/TrueBrain/blue-marshal-rs) was
 the reference that identified where Fenris Creations' published marshalling source lives.
 No code from it is included in EVEMA; it is credited because the pointer is what
-made a correct implementation possible.
+made a correct implementation possible. It is also used as a cross-check when
+reading Fenris Creations' source, for example on when the loader registers shared
+objects.
 
 ```
 Copyright (c) 2026 TrueBrain
@@ -67,8 +69,12 @@ MIT License
 ## EVE Wrench
 
 [`eve-wrench/eve-wrench-app`](https://github.com/eve-wrench/eve-wrench-app) (MIT)
-was studied as prior art for feature scope and for its attribution trail. No code
-from it is included in EVEMA.
+was studied as prior art for feature scope and for its attribution trail. Facts
+EVEMA took from it, each checked against real settings files or in game: which
+settings keys make up each copy group, the probe formation axis convention (+x
+West, +y Up, +z North), the layouts of the Drifter and directional-stack probe
+presets, and its note that the client re-centres a formation on the probes'
+average position. No code from it is included in EVEMA.
 
 ## Avalonia
 

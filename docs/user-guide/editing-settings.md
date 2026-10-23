@@ -4,7 +4,9 @@ EVEMA can change some settings directly, without copying from another character.
 
 Every edit backs up the file first, and every edit waits for EVE to close if a client is running. See [Backups, and changes while EVE is running](backups-and-eve-running.md).
 
-Overview, brackets and ship label settings live in the **account** file. If you select a character, these tabs show its [paired account](getting-started.md#3-pair-each-character-with-its-account), and your edits change that account, so every character on it gets them.
+The ship label and probe formations live in the **account** file. If you select a character, the **Ship Labels** tab shows its [paired account](getting-started.md#3-pair-each-character-with-its-account), and your edits change that account, so every character on it gets them.
+
+Overview tabs and bracket presets can't be viewed or edited in EVEMA for now; that part of EVEMA is being reworked. You can still copy them between accounts with [Copy sections to](copying-settings.md#copy-only-some-sections), and export the whole overview for the game from the **Ship Labels** tab's **Export ▾**.
 
 ## Window layout
 
@@ -19,32 +21,35 @@ The **Window Layout** tab draws every window at its saved position and size, wit
 
 A window outlined in red hangs off the edge of the screen at that resolution.
 
-## Overview
-
-The **Overview** tab lists the account's overview tabs, which bracket preset each one uses, and its columns.
-
-- **Overview flags** (expand the section) are the overview's on/off options. Ticking or unticking one saves it straight away, with a backup.
-- **Edit brackets…** changes which preset the selected tab uses, and that preset's always-shown brackets.
-
-## Brackets
-
-The **Brackets** tab is the bracket preset catalogue for the account.
-
-- **Search presets** and **Unused only** narrow the list. Select a preset to see its groups and states, which tabs use it, and how it compares with another preset (**Compare with**).
-- **Duplicate…**, **Rename…** and **Delete…** manage your own presets. Built-in presets can't be changed: duplicate one to make an editable copy.
-- Add or remove groups and states in the detail pane, then save.
-- **Assign to selected tab** makes the overview tab you picked use this preset. **Tab assignments → Edit…** does the same from the tab's side, and also edits that preset's always-shown list.
-- **Copy preset to…** copies the selected preset to another account.
-- EVE doesn't publish what its numbered *states* mean. Select one, type a name, and click **Save name**; EVEMA shows your name wherever that number appears. The names are kept on your computer only.
-
-**Always show ship brackets in space** (at the bottom of the tab) shows every ship's label all the time, not only when selected. It's a client launch preference stored in `prefs.ini`, not part of the account, so it applies to every account in this settings profile and takes effect after you restart the client.
-
 ## Ship label
 
-The **Ship Labels** tab shows a preview of the account's ship label. **Edit…** opens the editor:
+**Always show ship brackets in space** (at the top of the **Ship Labels** tab) shows every ship's label all the time, not only when selected. It's a client launch preference stored in `prefs.ini`, not part of the account, so it applies to every account in this settings profile and takes effect after you restart the client.
+
+Below it, the tab shows a preview of the account's ship label. **Edit…** opens the editor:
 
 - The label is a list of **segments** (for example corporation, alliance, pilot name, ship type and ship name), plus line breaks. **Add segment**, **Add line break**, **Up**, **Down** and **Remove** arrange them.
 - For each segment you can set it **Enabled**, add **Pre-text** and **Post-text** (such as brackets around a ticker), and choose a **Color**, **Style** and **Font size**. Leaving a colour unchecked, or a style as a dash, uses the client's default.
 - **Save** writes the label; **Cancel** drops your changes.
 
 **Export ▾** saves the label for use elsewhere: **In game (.yaml)…** writes the whole overview, label included, as a file you can import from the client's Overview Settings, and **Step by step (.txt)…** writes instructions for typing the label into EVE's own editor by hand.
+
+## Probe formations
+
+Your saved probe formations live in the **account** file. Select an account, or a character paired with one, and open the **Probe Formations** tab. It lists the formations; select one to see it around your ship, with each probe's range and how far off-centre it is.
+
+![Probe Formations tab](../images/local-files-probe-formations.png)
+
+To change them, click **Edit…** (or right-click the account and choose **Probe formations…**). The editor opens in its own window:
+
+![Probe formation editor](../images/probe-formations.png)
+
+- **Formations** (left): **Add**, **Duplicate**, **Move up**, **Move down** and **Delete**. Select one to edit it, and type its name under **Name**.
+- **Preview** (middle): the formation around your ship, with North/South, West/East and Up/Down axes. Drag to turn it, scroll to zoom, or pick **Top**, **Front**, **Side** or **Reset**.
+- **Probes** (right): each probe's distance from the ship to the West, Up and North (negative for East, Down and South), and its range. Type plain numbers for km, or add **m** or **au**; far-out positions are shown in AU. **Every probe's range** sets them all at once. A formation holds up to 8 probes.
+- **Start from a preset** and **Pattern** replace the selected formation's probes. Patterns (ring, line, sphere, pinpoint) take a count, a spread and an axis. Presets such as **Drifter** and the **Stack** ones are close-range layouts, measured in km.
+- **Transform** scales, rotates, mirrors or moves the whole formation.
+- **Undo** and **Redo** step through your edits, and **Save** writes them, with a backup, like every other change.
+
+**Keep formations centred.** In game, a formation is placed around the probes' current average position, not around your ship. So a formation whose probes don't average out on the ship drifts that far every time you apply it. Below the preview, EVEMA tells you how far off-centre a formation is, and **Balance** adds or moves one probe to centre it.
+
+If the file changes while the window is open, for example because EVE saved it when you logged out, EVEMA offers **Reload**. Closing with unsaved changes asks first.

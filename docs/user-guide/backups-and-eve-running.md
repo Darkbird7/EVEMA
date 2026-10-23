@@ -16,6 +16,26 @@ Restoring is itself a change, so the current version is backed up first. If you 
 
 For a character's window layout, the **Window Layout** tab also has a **Restore backup…** button.
 
+## Make a named backup
+
+Before you try something out, save a backup you can find again:
+
+1. In **Local Files**, right-click the file and choose **Back up now…**.
+2. Give it a name, such as "Before the fleet fight", and click OK.
+
+Named backups are **never deleted automatically**, however many changes you make afterwards. They show up in **Restore backup** under their name.
+
+A change that's still waiting for EVE to close isn't in a named backup: it isn't in the file yet. It gets its own backup when it's written.
+
+## Manage your backups
+
+Choose **Backups ▾ → Manage backups…** above the Local Files list to see every backup EVEMA holds, for every character and account. Click a column heading to sort, and use **Ctrl+click** (**Cmd+click** on macOS) or **Shift+click** to select several.
+
+- **Restore onto:** select one backup, pick a file, and click **Restore…**. The backup's own file is offered first, but you can also pick another character (or account) of the same kind. That applies, say, one character's backed-up layout to another. You get the same preview and confirmation as **Restore backup**, and the file you overwrite is backed up first.
+- **Delete…:** select one or more backups and click **Delete…**. EVEMA asks first. Deleted backups can't be recovered, but your settings files are not changed.
+
+A character's backup can only go onto a character, and an account's onto an account.
+
 ## Changes while EVE is running
 
 The EVE client saves its own copy of your settings when you log out or close it. A change written while the client is open would be overwritten a moment later, and the client wouldn't show it until next login anyway.

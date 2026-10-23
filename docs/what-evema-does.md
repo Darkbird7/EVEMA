@@ -8,19 +8,21 @@ EVEMA is a fan project. It is not made, endorsed or supported by Fenris Creation
 
 ### Your settings files (Local Files tab)
 
-- **Finds your settings.** It looks in the usual place on each system, including Steam/Proton and Wine prefixes on Linux. You can also point it at another folder. Characters are shown by name, and accounts by a name you choose.
+- **Finds your settings.** It looks in the usual place on each system, including Steam/Proton and Wine prefixes on Linux. You can also point it at another folder. Characters are shown by name, and accounts by a name you choose. Once you pair each character with its account, the list shows which go together.
 - **Shows what's in them.** For each character and account, it shows:
   - window positions on a scaled canvas
-  - overview tabs and bracket presets
-  - overview options and the ship label
+  - the ship label
   - the character's public profile
 - **Copies settings between characters and accounts:**
   - the whole file, to one character or to many at once
   - or only the sections you pick: window layout, overview tab presets, bracket presets, overview options, ship label
+  - or groups of settings: the whole overview, probe formations, suppressed dialogs, audio, camera and graphics, market filters, module slots, window tab groups, Neocom, chat channels, info panels, docked panels and search history
+  - sections and groups can go to one file or to many at once
   - before anything is written, it shows you what will change
 - **Exports and imports** a character's or account's settings as a JSON file you can keep or share, and exports an account's overview as the `.yaml` file the game's own Overview Settings can import.
-- **Edits settings directly:** bracket presets (create, duplicate, rename, delete, edit groups and states), which preset each overview tab uses, the ship label, overview options, window positions, and the "always show ship brackets" preference.
-- **Backs up before every change.** It makes a timestamped backup before it writes to any file, and you can restore any backup from the app. Files are written in a way that can't leave a half-written file behind, even if something crashes mid-save.
+- **Moves a whole setup** to another computer: **Export everything** saves every settings file of every install and profile, with EVEMA's names and pairings (and its backups, if you like), in one checksummed `.zip`. **Import everything** shows what's new and what differs before writing anything.
+- **Edits settings directly:** the ship label, window positions, probe formations, and the "always show ship brackets" preference. Overview and bracket preset editing is hidden while it's reworked; those settings can still be copied.
+- **Backs up before every change.** It makes a timestamped backup before it writes to any file, and you can restore any backup from the app, onto its own file or another of the same kind. You can also save named backups, which are kept until you delete them. Files are written in a way that can't leave a half-written file behind, even if something crashes mid-save.
 - **Waits for EVE to close.** The client saves its own settings when it logs out or closes, which would overwrite a change made while it was open (and a change only shows up at the next login anyway). So while any client is running, EVEMA holds each change back, shows it in a banner, and writes it once every client has closed, on top of whatever the client saved on its way out. **Write now** and **Discard** are in the banner, and EVEMA asks before quitting with changes still waiting.
 
 ### Partnership tab
@@ -39,7 +41,7 @@ EVEMA is a fan project. It is not made, endorsed or supported by Fenris Creation
 ## What it connects to
 
 - **ESI** (Fenris Creations' official public API, `esi.evetech.net`) and Fenris Creations' image server, for character names, public profiles, portraits and logos, and item group names. No login and no account access: only public information. Responses are cached and reused for as long as Fenris Creations allows.
-- **GitHub**, to check for a newer EVEMA release at startup (you can turn this off in Settings), and for the Tools tab's Get latest and Check for updates buttons when you click them.
+- **GitHub**, to check for a newer EVEMA release at startup (you can turn this off in Settings), to download that release when you click **Install and restart**, and for the Tools tab's Get latest and Check for updates buttons when you click them.
 
 Nothing else. EVEMA has no telemetry or analytics, and it never uploads your settings, logs or anything else.
 
@@ -52,7 +54,8 @@ These are firm lines, not "not yet":
 - **No reading or altering network traffic** between the client and Fenris Creations' servers.
 - **No automation or input.** No macros, no keystroke or mouse broadcasting, and nothing that plays the game for you.
 - **No logging in as you.** EVEMA never asks for your EVE account or SSO login.
-- **Nothing third-party runs inside EVEMA.** Managed tools run as their own programs, and only when you click Launch. EVEMA never starts something it downloaded by itself, never asks for administrator rights, and never installs certificates.
+- **Nothing third-party runs inside EVEMA.** Managed tools run as their own programs, and only when you click Launch.
+- **Nothing it downloads runs unless you click for it.** A tool starts only when you click **Launch**. A new EVEMA installs only when you click **Install and restart**, and only after the download matches the SHA-256 checksum GitHub publishes for it. EVEMA never asks for administrator rights and never installs certificates.
 - **No writes without a backup.**
 
 Requests that would cross these lines will be closed, however useful they would be.
@@ -60,8 +63,8 @@ Requests that would cross these lines will be closed, however useful they would 
 ## Good to know
 
 - **Waiting changes need EVEMA open.** A change held back while EVE runs is written when EVE closes, so leave EVEMA running until then (it asks before you quit). With several clients open, it waits for all of them.
-- **Not every setting can be copied section by section yet.** Keybinds, chat, audio and graphics are copied only as part of a whole-file copy.
-- **Test servers:** ESI only knows Tranquility characters, so characters from Singularity or Thunderdome are shown by ID, not name.
+- **Keybinds can't be copied section by section yet.** They're copied only as part of a whole-file copy.
+- **Other servers:** ESI only knows Tranquility characters. Singularity characters are looked up there anyway and marked "(via Tranquility)", since Singularity is a copy of Tranquility; Thunderdome characters are shown by ID. Serenity (the Chinese server) hasn't been tested: its files show if its client keeps them in the usual place.
 - **macOS:** the app isn't notarized, so the first launch needs right-click → **Open**. On macOS, and in Wine setups other than Steam/Proton, EVEMA may not detect a running client, in which case changes are written straight away, as if EVE were closed.
 - **Where EVEMA keeps its own data:** its preferences, backups, cache and logs live in its own folder, never inside EVE's. **Settings → Open Logs Folder** takes you there.
 

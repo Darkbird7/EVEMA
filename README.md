@@ -8,9 +8,9 @@ EVEMA is a fan tool and is not affiliated with or endorsed by Fenris Creations (
 
 **What it does, in short:**
 
-- See each character's window layout, overview, bracket presets and ship label without logging in.
+- See each character's window layout, ship label and public profile without logging in.
 - Copy a whole settings file, or just the sections you pick, from one character to one or many others, with a preview of every change first.
-- Edit bracket presets, ship labels and overview options directly. Every change is backed up first and can be restored.
+- Edit window positions, ship labels and probe formations directly. Every change is backed up first and can be restored.
 - Keep community tools such as EVE-O Preview and Pyfa installed, launched and up to date, with checksums verified.
 
 EVEMA never modifies the client, reads its memory or automates anything. See **[what EVEMA does and won't do](docs/what-evema-does.md)** for the full list, including exactly what it connects to.
@@ -20,7 +20,7 @@ EVEMA never modifies the client, reads its memory or automates anything. See **[
 
 | | |
 |---|---|
-| ![Brackets](docs/images/local-files-brackets.png) | ![Ship labels](docs/images/local-files-ship-labels.png) |
+| ![Ship labels](docs/images/local-files-ship-labels.png) | ![Probe formations](docs/images/probe-formations.png) |
 | ![Warning while EVE is running](docs/images/running-client-banner.png) | ![Tools](docs/images/tools.png) |
 
 </details>
@@ -33,10 +33,12 @@ Grab the archive for your system from the [Releases page](../../releases). Every
 
 | System | File | Install |
 | --- | --- | --- |
-| Windows (64-bit) | `EVEMA-<version>-win-x64.zip` | Unzip anywhere and run `EVEMA.exe`. |
+| Windows (64-bit) | `EVEMA-<version>-win-x64-setup.exe` | Run it. Installs for you only (no administrator rights), with a Start menu entry and an uninstaller. |
+| Windows (64-bit), portable | `EVEMA-<version>-win-x64.zip` | Unzip anywhere and run `EVEMA.exe`. |
 | macOS, Apple silicon | `EVEMA-<version>-osx-arm64.zip` | Unzip, drag `EVEMA.app` to Applications. |
 | macOS, Intel | `EVEMA-<version>-osx-x64.zip` | Same as above. |
-| Linux (x64) | `EVEMA-<version>-linux-x64.tar.gz` | Extract, then run `./EVEMA`. |
+| Linux (x64) | `EVEMA-<version>-linux-x64.AppImage` | Make it executable (`chmod +x`) and run it. |
+| Linux (x64), tarball | `EVEMA-<version>-linux-x64.tar.gz` | Extract, then run `./EVEMA`. |
 
 **macOS first launch.** The app is not notarized, so macOS will refuse a normal double-click the first time. Right-click `EVEMA.app`, choose **Open**, then confirm (or allow it under System Settings → Privacy & Security → Open Anyway). You only need to do this once.
 

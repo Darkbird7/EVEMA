@@ -26,7 +26,7 @@ The usual locations are:
 
 ## A character shows a number instead of a name
 
-Names come from EVE's public API, which only knows Tranquility characters. Characters on Singularity or Thunderdome are shown by ID. Right-click and **Rename Character…** to give it a name in EVEMA.
+Names come from EVE's public API, which only knows Tranquility characters. Singularity characters are looked up there too and marked **(via Tranquility)**; if one shows the wrong name, it was probably made on Singularity after the last copy from Tranquility. Thunderdome characters are shown by ID. Either way, right-click and **Rename Character…** to give it a name in EVEMA; your name always wins.
 
 ## I want to undo a change
 
@@ -43,6 +43,14 @@ The app isn't code-signed yet. Choose **More info → Run anyway**. You can chec
 ## A Linux AppImage tool won't start
 
 Mark it executable (`chmod +x Tool.AppImage`, or tick "Allow executing as program" in your file manager), then click **Launch** again.
+
+## Updating EVEMA
+
+When a newer EVEMA is out, a banner above the tabs says so (turn the check off in **Settings → Updates**).
+
+- **Install and restart** (Windows and Linux) downloads the new version, checks it against the SHA-256 checksum GitHub publishes for it, puts it in place of the running one, and restarts EVEMA. If the download doesn't match, or GitHub published no checksum, nothing is installed and the banner says why. EVEMA's old files are removed the next time it starts.
+- While changes are waiting for EVE to close, EVEMA won't restart for an update: write or discard them in **Local Files** first.
+- **View release** opens the release page, to download the new version yourself. On macOS that's the only option: macOS runs an app it hasn't seen notarized from a read-only copy, so EVEMA can't replace itself there. The same goes for the Linux AppImage, which runs from a read-only image (download the new AppImage instead), and for any folder EVEMA can't write to.
 
 ## Where EVEMA keeps its own data
 

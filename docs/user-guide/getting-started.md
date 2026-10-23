@@ -18,14 +18,14 @@ Click **Get started**, or **Skip (use defaults)**. Everything here can be change
 
 Open the **Local Files** tab. The left side lists every settings file EVEMA found, under **Discovered settings files**:
 
-- **Characters** are shown by name, looked up from EVE's public API. Characters from the test servers (Singularity, Thunderdome) are shown by ID, because that API only knows Tranquility.
+- **Characters** are shown by name, looked up from EVE's public API, which only knows Tranquility. Singularity is a copy of Tranquility, so its characters are looked up there too and marked **(via Tranquility)**: a character made on Singularity since the last copy may not match. Thunderdome characters are shown by ID. The **Server** column, and its filter, say which server each file belongs to.
 - **Accounts** have no public name, so they're listed by ID. Give each one a name you'll recognise: right-click it and choose **Rename Account…**. The name is only stored in EVEMA.
 
 Click any row to see its details on the right. Use the funnel icons in the **Name**, **Type** and **Server** column headers to filter the list, and **Refresh** after EVE has saved new files.
 
 ## 3. Pair each character with its account
 
-A character's overview, brackets and ship label live in its *account's* file (see [the two file types](README.md#two-words-used-everywhere)). To see them when you select the character, pair the two:
+A character's overview, ship label and probe formations live in its *account's* file (see [the two file types](README.md#two-words-used-everywhere)). To see them when you select the character, pair the two:
 
 1. Select the character.
 2. Click the **⇄** button next to its name, above the detail tabs.
@@ -33,15 +33,23 @@ A character's overview, brackets and ship label live in its *account's* file (se
 
 EVEMA remembers the pairing. **Clear** removes it.
 
+You can see the pairings in the list:
+
+- The **Account** column shows each character's account, or **Not paired**, and each account's number of characters. Click the column heading to sort, which puts each account's characters together.
+- Select a character, and its account's row is tinted **violet** and the other characters on that account **amber**, so every file that goes with it, and which kind it is, shows at a glance. Select an account, and all of its characters are tinted amber, and the header above the tabs lists them. Select several rows at once (say, to copy settings to them) and the tints stay while they all belong to one account; pick rows from different accounts and the tints step aside.
+
 > **Not sure which account a character is on?** Log in with only that character, log out, close the client, then click **Refresh** in EVEMA. The character file and the account file with the newest **Last Modified** times belong together.
 
 ## 4. Look around
+
+In the list, click a column heading to sort by it, drag a column's edge to resize it, and **double-click the edge** to fit the column to its contents. EVEMA remembers the widths you set, and where you leave the divider between the list and the details, like the window size.
 
 With a character selected, the detail tabs show:
 
 - **Profile:** public information from EVE's API (corporation, alliance, history) and what EVEMA can see on this computer.
 - **Window Layout:** every window's position drawn to scale. **Preview at:** shows how the layout would look at another screen resolution.
-- **Overview**, **Brackets** and **Ship Labels:** the paired account's overview tabs, bracket presets and ship label.
+- **Ship Labels:** the paired account's ship label, and the "always show ship brackets in space" preference.
+- **Probe Formations:** the paired account's saved probe formations, with **Edit…** to change them.
 
 Nothing is changed by looking. EVEMA only writes when you click something that says so, and it always makes a [backup](backups-and-eve-running.md) first.
 
