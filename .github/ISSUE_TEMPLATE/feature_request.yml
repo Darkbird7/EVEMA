@@ -28,7 +28,7 @@ body:
     attributes:
       label: Which part of EVEMA?
       options:
-        - Local Files (settings files, copying, editing, backups)
+        - Characters (settings files, copying, editing, backups)
         - Partnership
         - Tools
         - Settings

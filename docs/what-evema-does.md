@@ -6,7 +6,7 @@ EVEMA is a fan project. It is not made, endorsed or supported by Fenris Creation
 
 ## What it does
 
-### Your settings files (Local Files tab)
+### Your settings files (Characters tab)
 
 - **Finds your settings.** It looks in the usual place on each system, including Steam/Proton and Wine prefixes on Linux. You can also point it at another folder. Characters are shown by name, and accounts by a name you choose. Once you pair each character with its account, the list shows which go together.
 - **Shows what's in them.** For each character and account, it shows:
@@ -66,8 +66,8 @@ Requests that would cross these lines will be closed, however useful they would 
 - **Keybinds can't be copied section by section yet.** They're copied only as part of a whole-file copy.
 - **Other servers:** ESI only knows Tranquility characters. Singularity characters are looked up there anyway and marked "(via Tranquility)", since Singularity is a copy of Tranquility; Thunderdome characters are shown by ID. Serenity (the Chinese server) hasn't been tested: its files show if its client keeps them in the usual place.
 - **macOS:** the app isn't notarized, so the first launch needs right-click → **Open**. On macOS, and in Wine setups other than Steam/Proton, EVEMA may not detect a running client, in which case changes are written straight away, as if EVE were closed.
-- **Where EVEMA keeps its own data:** its preferences, backups, cache and logs live in its own folder, never inside EVE's. **Settings → Open Logs Folder** takes you there.
+- **Where EVEMA keeps its own data:** its preferences, backups, cache and logs live in its own folder, never inside EVE's. **Settings → Advanced → Open logs folder** takes you there.
 
 ## Found a problem?
 
-[Open an issue](https://github.com/Darkbird7/EVEMA/issues/new/choose). If a change went wrong, you can restore the previous version from the file's backups in the Local Files tab.
+[Open an issue](https://github.com/Darkbird7/EVEMA/issues/new/choose). If a change went wrong, you can restore the previous version from the file's backups in the Characters tab.

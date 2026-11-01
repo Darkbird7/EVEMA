@@ -16,7 +16,7 @@ For what EVEMA will and won't do, and everything it connects to, see [what EVEMA
 
 ## Two words used everywhere
 
-EVE keeps your settings in two kinds of file, and EVEMA shows both in the **Local Files** tab:
+EVE keeps your settings in two kinds of file, and EVEMA shows both in the **Characters** tab:
 
 | Type in EVEMA | File | What's in it |
 | --- | --- | --- |

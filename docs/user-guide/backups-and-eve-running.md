@@ -4,23 +4,27 @@
 
 Before EVEMA writes to any EVE settings file, it saves a timestamped copy of the file as it was. That covers copies, imports, edits, restores, all of it. Files are also written in a way that can't leave a half-written file behind if something crashes mid-save.
 
-Backups are kept in EVEMA's own data folder, never inside EVE's (see [where EVEMA keeps its data](troubleshooting.md#where-evema-keeps-its-own-data)). By default EVEMA keeps the newest **5** backups of each file and deletes older ones. Change that in **Settings → Backups → Keep per file**.
+Backups are kept in EVEMA's own data folder, never inside EVE's (see [where EVEMA keeps its data](troubleshooting.md#where-evema-keeps-its-own-data)). By default EVEMA keeps the newest **5** backups of each file and deletes older ones. Change that in **Settings → Backups → Backups to keep per file**.
 
 ## Undo a change: restore a backup
 
+Straight after a change, the status bar at the bottom of the window shows **Undo** next to its message. Click it to put back every file that change wrote. It's offered until your next change, because putting a file back after a later change would undo that one too.
+
+For anything older:
+
 1. Close every EVE client.
-2. In **Local Files**, right-click the file and choose **Restore backup**.
+2. In **Characters**, select the file and choose **⋯** → **Restore backup** (or right-click the file).
 3. Pick the date and time from before the change, and confirm.
 
 Restoring is itself a change, so the current version is backed up first. If you pick the wrong backup, you can restore the one you just replaced.
 
-For a character's window layout, the **Window Layout** tab also has a **Restore backup…** button.
+For a character's window layout, the **Window Layout** tab's own **⋯** button has **Restore backup** too.
 
 ## Make a named backup
 
 Before you try something out, save a backup you can find again:
 
-1. In **Local Files**, right-click the file and choose **Back up now…**.
+1. In **Characters**, select the file and click **Back up now…** (or right-click the file).
 2. Give it a name, such as "Before the fleet fight", and click OK.
 
 Named backups are **never deleted automatically**, however many changes you make afterwards. They show up in **Restore backup** under their name.
@@ -29,7 +33,7 @@ A change that's still waiting for EVE to close isn't in a named backup: it isn't
 
 ## Manage your backups
 
-Choose **Backups ▾ → Manage backups…** above the Local Files list to see every backup EVEMA holds, for every character and account. Click a column heading to sort, and use **Ctrl+click** (**Cmd+click** on macOS) or **Shift+click** to select several.
+Choose **⋯ → Manage backups…** above the Characters list to see every backup EVEMA holds, for every character and account. Click a column heading to sort, and use **Ctrl+click** (**Cmd+click** on macOS) or **Shift+click** to select several.
 
 - **Restore onto:** select one backup, pick a file, and click **Restore…**. The backup's own file is offered first, but you can also pick another character (or account) of the same kind. That applies, say, one character's backed-up layout to another. You get the same preview and confirmation as **Restore backup**, and the file you overwrite is backed up first.
 - **Delete…:** select one or more backups and click **Delete…**. EVEMA asks first. Deleted backups can't be recovered, but your settings files are not changed.
@@ -42,7 +46,7 @@ The EVE client saves its own copy of your settings when you log out or close it.
 
 So while any client is running, EVEMA **holds changes back** instead of writing them:
 
-- A banner at the top of **Local Files** says a client is running and lists every change that's waiting.
+- A banner at the top of **Characters** says a client is running and lists every change that's waiting.
 - EVEMA's previews already show your waiting changes, so you can keep working (and make further changes on top).
 - Once every client has been closed for a few seconds, EVEMA writes the waiting changes, on top of whatever the client saved on its way out. Each still gets its backup.
 

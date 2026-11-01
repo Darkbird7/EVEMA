@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to report this. If a change to your settings went wrong, you can undo it first: in **Local Files**, right-click the file and restore one of its backups.
+        Thanks for taking the time to report this. If a change to your settings went wrong, you can undo it first: in **Characters**, right-click the file and restore one of its backups.
 
         **Please don't attach your `core_char_*.dat` / `core_user_*.dat` files here.** They're public once posted. If the bug needs one, say so and we'll sort out a private way to share it.
 
@@ -14,11 +14,11 @@ body:
     attributes:
       label: Where in EVEMA?
       options:
-        - Local Files - finding or listing files
-        - Local Files - preview (window layout, overview, brackets, ship labels, profile)
-        - Local Files - copy, section copy, export or import
-        - Local Files - editing (ship labels, probe formations, window positions)
-        - Local Files - backups and restore
+        - Characters - finding or listing files
+        - Characters - preview (window layout, overview, brackets, ship labels, profile)
+        - Characters - copy, section copy, export or import
+        - Characters - editing (ship labels, probe formations, window positions)
+        - Characters - backups and restore
         - Partnership
         - Tools
         - Settings
@@ -41,8 +41,8 @@ body:
       label: Steps to reproduce
       description: The clicks that lead to the problem, as exactly as you can.
       placeholder: |
-        1. Select a character in Local Files
-        2. Right-click → Copy sections to → ...
+        1. Select a character in the Characters tab
+        2. Copy to… → tick a character → Window layout → ...
         3. ...
     validations:
       required: true
@@ -71,7 +71,7 @@ body:
     attributes:
       label: EVEMA version
       description: Shown in the About dialog (the icon in the title bar).
-      placeholder: e.g. 0.1.0
+      placeholder: e.g. 0.2.5
     validations:
       required: true
 
@@ -106,7 +106,7 @@ body:
     attributes:
       label: Log excerpt
       description: |
-        **Settings → Open Logs Folder**, open today's `evema-*.log`, and paste the lines from around the time of the problem.
+        **Settings → Advanced → Open Logs Folder**, open today's `evema-*.log`, and paste the lines from around the time of the problem.
         Logs can contain character names, IDs and folder paths. Remove anything you'd rather not post.
       render: text
 

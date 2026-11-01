@@ -1,12 +1,21 @@
 # Editing settings
 
-EVEMA can change some settings directly, without copying from another character. Select a character or account in **Local Files**, then use the detail tabs on the right.
+EVEMA can change some settings directly, without copying from another character. Select a character or account in **Characters**, then use the detail tabs on the right.
 
 Every edit backs up the file first, and every edit waits for EVE to close if a client is running. See [Backups, and changes while EVE is running](backups-and-eve-running.md).
 
 The ship label and probe formations live in the **account** file. If you select a character, the **Ship Labels** tab shows its [paired account](getting-started.md#3-pair-each-character-with-its-account), and your edits change that account, so every character on it gets them.
 
-Overview tabs and bracket presets can't be viewed or edited in EVEMA for now; that part of EVEMA is being reworked. You can still copy them between accounts with [Copy sections to](copying-settings.md#copy-only-some-sections), and export the whole overview for the game from the **Ship Labels** tab's **Export ▾**.
+## Overview
+
+The **Overview** tab lists the account's overview tabs, each with its colour, its bracket preset and its columns. Built-in presets are named in words, such as "Show All (built in)". You change your overview in the game; here you copy it and share it:
+
+- **Copy overview to…** opens [Copy settings](copying-settings.md#copy-settings) with **Overview and brackets** already chosen.
+- **Share for the game (.yaml)…** saves it as the same `.yaml` file the game's own Overview Settings export, for anyone to import in the client.
+- **Overview flags** (at the bottom, folded away) are the overview's on/off options.
+- **⋯ → Edit presets…** opens the bracket preset editor as its own tab, for anyone who wants to edit presets outside the game.
+
+![Overview tab](../images/local-files-overview.png)
 
 ## Window layout
 
@@ -14,10 +23,10 @@ The **Window Layout** tab draws every window at its saved position and size, wit
 
 - **Preview at:** shows how the layout would look at another resolution. EVE pulls windows back on screen when you move to a *smaller* resolution, and this preview copies that. Moving to a *larger* resolution doesn't rescale anything, so the layout renders small and out of place, the same as in game.
 - **Move or resize a window:** drag it, or drag its edges, on the canvas. This only works with **Preview at:** set to the native resolution.
-- **Show all / Hide all**, and the **Preview** column in the table, choose which windows are drawn. They don't change the file.
-- **Undo** steps back one change, **Reset** drops every unsaved change, and **Save changes** writes them.
-- **Export…** saves some or all of the windows to a file, and **Import…** applies such a file to the selected character. Private conversations, agent windows and windows known only by a number are left out of exports by default, because they reveal who you talked to or mean nothing to another character. Import only adds or overwrites positions: it never removes a window that's already saved.
-- **Restore backup…** puts back an earlier version of this character's file.
+- The **Preview** column in the table chooses which windows are drawn; its header checkbox shows or hides them all. It doesn't change the file.
+- Once you've moved something, a bar appears under the table: **Undo** steps back one change, **Discard** drops every unsaved change, and **Save changes** writes them.
+- **⋯** → **Export window layout…** saves some or all of the windows to a file, and **Import window layout…** applies such a file to the selected character. Private conversations, agent windows and windows known only by a number are left out of exports by default, because they reveal who you talked to or mean nothing to another character. Import only adds or overwrites positions: it never removes a window that's already saved.
+- **⋯** → **Restore backup** puts back an earlier version of this character's file.
 
 A window outlined in red hangs off the edge of the screen at that resolution.
 

@@ -1,57 +1,61 @@
 # Copying settings
 
-Everything on this page starts with a right-click on a row in the **Local Files** tab. Whatever you pick, EVEMA shows what will change before writing anything, and backs up the file it's about to change.
+Copying starts from the selected file in the **Characters** tab: click **Copy to…** above its details (or right-click the row and choose **Copy to…**, or drag the row onto the character or account you want to copy to). Export and import are under the **⋯** button beside it. Whatever you pick, EVEMA shows what will change before writing anything, and backs up every file it's about to change.
 
 **Close every EVE client first.** The client saves its own settings when it logs out, which would undo your copy. If a client is open, EVEMA holds the copy back and writes it once the client closes; see [Changes while EVE is running](backups-and-eve-running.md#changes-while-eve-is-running).
 
-## Which copy do I want?
+## Which do I want?
 
 | You want to… | Use |
 | --- | --- |
-| Make one character's or account's settings an exact copy of another's | [Copy all to](#copy-a-whole-file) |
-| Do that for a whole group of characters at once | [Copy all to N selected files](#copy-to-many-at-once) |
-| Copy only the window layout, the overview presets, the audio, camera or chat settings, and leave everything else alone | [Copy sections to](#copy-only-some-sections) |
-| Do that for a whole group of characters or accounts at once | [Copy sections to N selected files](#copy-sections-to-many-at-once) |
+| Make one or more characters look like another: windows, overview, interface, or all of it | [Copy settings](#copy-settings) |
 | Keep a copy of your setup, move it to another computer, or share it with a friend | [Export and Import](#export-and-import-a-settings-file) |
 | Share your overview in the game's own format, for anyone to import in the client | [In game (.yaml)](#export-your-overview-for-the-game) |
 | Move everything to a new computer | [Export everything](#move-your-whole-setup-to-another-computer) |
 
 Copies only go between files of the same type: character to character, or account to account.
 
-## Copy a whole file
+## Copy settings
 
-1. Right-click the file you want to copy **from**.
-2. Choose **Copy all to**, then the file to copy **to**.
-3. Check the confirmation, which shows what will change, then click **Overwrite**.
+**Copy to…** opens the **Copy settings** window, which asks three questions and then shows you every change:
 
-The destination becomes an exact copy of the source: windows, overview, keybinds, chat, audio, graphics, everything that file holds.
+![Copy settings: choosing who gets the settings](../images/copy-settings-to.png)
 
-## Copy to many at once
+1. **From:** the file you selected. Click **1 · From** to pick a different one.
+2. **To:** tick the characters (or accounts) that should get the settings. Characters are listed under the account they're [paired](getting-started.md#3-pair-each-character-with-its-account) with, with any unpaired ones last; tick an account's box to tick all of its characters. **Filter by name** narrows a long list, and **Select all** / **Select none** act on what's shown. Rows you'd already selected in the list with **Ctrl+click** (**Cmd+click** on macOS) or **Shift+click** start ticked.
+3. **What:** pick what they should get:
+   - **Window layout:** where every window sits and how big it is.
+   - **Overview and brackets:** which bracket preset each overview tab uses, the bracket presets, overview options and the ship label. These live in the account file, so this needs the characters to be paired. It copies between their accounts, each account once.
+   - **Interface:** Neocom, chat channels, info panels and docked panels.
+   - **Audio, camera and graphics** (accounts only).
+   - **Everything:** an exact copy of the whole file. For a character that's the character file only; account settings, such as the overview, aren't included.
+   - **Custom…:** choose sections and groups yourself (see below).
+   ![Copy settings: choosing what to copy](../images/copy-settings-what.png)
 
-1. Click the source, then **Ctrl+click** (**Cmd+click** on macOS) each target, or **Shift+click** for a range. Targets must be the same type as the source.
-2. Right-click the source.
-3. Choose **Copy all to** → **Copy all to N selected files…**, check the summary, and confirm.
+4. **Review changes** opens the review. **Everything** asks you to confirm overwriting the files, with a summary of what will change. Every other choice opens the **Copy sections** window with that choice ticked: it lists every change, grouped by section and labelled with its file. Expand a section to see each change, untick any you don't want (**Select all** / **Select none** help), or tick more. Then click **Copy**.
 
-Each target gets its own backup.
+Each file gets its own backup and its own write. If one fails, the others still go ahead, and the status bar names the ones that failed. Right after a copy, **Undo** in the status bar puts every file back.
 
-## Copy only some sections
+### Groups
 
-Section copy changes only the parts you tick and leaves the rest of the destination file alone.
+If you copy to the same characters again and again, keep them as a group (once you have one, **Show** above the Characters list can narrow the list to it, too). On the **To** step, tick them, type a name (say "Mining alts") in the box at the bottom, and click **Save ticked as a group**. Next time, the group shows above the list: click it to tick everyone in it, or click its **×** to forget it. Groups are only kept in EVEMA.
 
-1. Right-click the source and choose **Copy sections to**, then the destination.
-2. The **Copy sections** window lists every change, grouped by section. Expand a section to see each change, and untick any you don't want (**Select all** / **Select none** help).
-3. Click **Copy**.
+### Saved copies: the same copy again in one click
 
-What you can copy:
+On the **What** step, tick **Save this copy to run again** and give it a name (EVEMA suggests one, such as "Window layout from Main"). After you rearrange your main's windows, you don't need to go through the steps again: select the main, choose **⋯** → **Saved copies** (or right-click it), pick the copy and **Run…**. It goes straight to the review, so you still see every change before anything is written. **Delete** forgets the saved copy; nothing it copied is touched.
 
-- **Between characters:** the **Window layout**. If both characters are [paired with an account](getting-started.md#3-pair-each-character-with-its-account), their accounts' overview sections are offered too.
+If you ticked exactly the members of a group, the saved copy remembers the group rather than the characters, so adding a character to the group later adds it to the copy too.
+
+### Sections and groups
+
+**Custom…**, and the review for every choice except **Everything**, list these.
+
+- **Between characters:** the **Window layout**. If the characters are paired with accounts, their accounts' overview sections are offered too.
 - **Between accounts:** **Overview tabs' bracket presets** (which preset each tab uses), **Bracket presets**, **Overview flags** and **Ship label**.
 
 Overview tabs and bracket presets are matched **by name**, not by position. Nothing is created on the destination: a tab that doesn't exist there is reported as not matched rather than added.
 
-### More settings you can copy
-
-Under those sections, the window lists more groups of settings. Each is ticked to begin with only if it's on by default below and would change something:
+Under those sections, the window lists more groups of settings. With **Custom…**, each is ticked to begin with only if it's on by default below and would change something; with the other choices, only that choice's sections and groups start ticked:
 
 | Group | File | On by default | What it copies |
 | --- | --- | --- | --- |
@@ -74,27 +78,18 @@ A group makes the destination's settings in it **the same as the source's**. So 
 
 Keybinds can't be copied section by section yet. Use a whole-file copy for those.
 
-## Copy sections to many at once
-
-1. Click the source, then **Ctrl+click** (**Cmd+click** on macOS) each target, or **Shift+click** for a range. Targets must be the same type as the source.
-2. Right-click the source and choose **Copy sections to** → **Copy sections to N selected files…**.
-3. Tick sections and groups once; they apply to every target. Each change in a list is labelled with its file, so you can untick a change on one file and keep it on the others.
-4. Click **Copy**.
-
-Each file gets its own backup and its own write. If one fails, the others still go ahead, and the status bar names the ones that failed. For characters, their paired accounts are included, each once, however many of the characters share it.
-
 ## Export and import a settings file
 
 Export saves settings to a JSON file that you can keep as a snapshot, move to another computer, or share.
 
-- **Right-click → Export → Export all…** saves everything EVEMA can copy by section. For a character, that's its window layout plus its paired account's overview settings.
-- **Right-click → Export → Export sections…** lets you pick sections and individual changes first.
+- **⋯ (or right-click) → Export → Export all…** saves everything EVEMA can copy by section. For a character, that's its window layout plus its paired account's overview settings.
+- **⋯ (or right-click) → Export → Export sections…** lets you pick sections and individual changes first.
 
-To apply one, right-click the file to change and choose **Import…**. You get the same preview, per-change ticking and backup as a section copy. Importing onto a character applies the window layout to the character and the overview settings to its paired account.
+To apply one, select the file to change and choose **⋯** → **Import…** (or right-click it). You get the same preview, per-change ticking and backup as a section copy. Importing onto a character applies the window layout to the character and the overview settings to its paired account.
 
 ## Export your overview for the game
 
-**Right-click → Export → In game (.yaml)…** saves the account's overview (for a character, its paired account's) as the same `.yaml` file EVE's own Overview Settings → Export creates. Import it in the client from **Overview Settings**. It's the format players already use to share overview packs.
+**⋯ (or right-click) → Export → In game (.yaml)…** saves the account's overview (for a character, its paired account's) as the same `.yaml` file EVE's own Overview Settings → Export creates. Import it in the client from **Overview Settings**. It's the format players already use to share overview packs.
 
 The **Ship Labels** tab has the same export under **Export ▾**, plus **Step by step (.txt)…**, which writes instructions for re-entering the label by hand in EVE's Ship Label editor.
 
@@ -102,13 +97,13 @@ A few overview colours EVEMA can't match to the game's palette are left out; the
 
 ## Move your whole setup to another computer
 
-**Backups ▾ → Export everything…** (above the Local Files list) saves your whole setup in one `.zip`:
+**⋯ → Export everything…** (above the Characters list) saves your whole setup in one `.zip`:
 
 - every character and account settings file, and `prefs.ini`, of every EVE install and profile on this computer
 - EVEMA's account names, character names, pairings and state names
 - EVEMA's backups too, if you tick **Include EVEMA's backups**
 
-On the other computer, run each EVE client you use once, so its settings folder exists. Then choose **Backups ▾ → Import everything…** and pick the archive. EVEMA checks every file against the checksum saved with it, and refuses the whole archive if anything was damaged or changed.
+On the other computer, run each EVE client you use once, so its settings folder exists. Then choose **⋯ → Import everything…** and pick the archive. EVEMA checks every file against the checksum saved with it, and refuses the whole archive if anything was damaged or changed.
 
 The import window lists every settings file and how it compares with what's already there:
 
@@ -125,4 +120,4 @@ Settings files hold your character and account IDs, chat channel IDs and other d
 
 ## If a copy went wrong
 
-Every copy backed up the destination first. Right-click the file, choose **Restore backup**, and pick the time from before the copy. See [Backups](backups-and-eve-running.md#undo-a-change-restore-a-backup).
+Straight after a copy, click **Undo** at the right of the status bar to put every file it changed back. Later on, every copy still backed up the destination first: select the file, choose **⋯** → **Restore backup** (or right-click it), and pick the time from before the copy. See [Backups](backups-and-eve-running.md#undo-a-change-restore-a-backup).

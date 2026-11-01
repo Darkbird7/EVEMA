@@ -18,9 +18,9 @@ The table lists each pilot with how often you met them, the ships you saw them i
 
 Tidy the list:
 
-- **Add Pilot** adds someone by hand. **Remove Checked** takes ticked pilots out of this list.
-- **Blacklist Checked** moves ticked names (NPCs, drones, your own alts) to the blacklist, so future scans skip them. **Manage Blacklist…** edits that list.
-- **Select All**, **Select None** and **Invert Selection** help with long lists.
+- **Add Pilot** adds someone by hand.
+- The checkbox in the **In Pool** column's header puts every pilot in the pool, or takes every pilot out. **⋯** → **Invert Selection** swaps them.
+- While any pilots are ticked, a bar under the table offers **Remove Checked**, which takes them out of this list, and **Blacklist Checked**, which moves their names (NPCs, drones, your own alts) to the blacklist so future scans skip them. **⋯** → **Manage Blacklist…** edits that list.
 
 ## 2. Load the prizes (Skin Inventory)
 
@@ -29,11 +29,11 @@ Tidy the list:
 
 ## 3. Run the draw (Assignment)
 
-1. Optional: enter a **Seed**. The same seed always gives the same draw, so you can preview a result, or let others check it.
-2. Optional: set **Max winners**.
+1. Optional: under **Options**, enter a **Seed**. The same seed always gives the same draw, so you can preview a result, or let others check it.
+2. Optional: under **Options**, set **Max winners**.
 3. Click **Run Draw**. Pilots and skins are shuffled separately and paired off one to one until either runs out.
 
 The results list who gets which skin, plus **Pilots with no skin left** and **Leftover skin inventory**.
 
-- **Copy Results** or **Export to File…** to share the result.
+- **⋯** → **Copy Results** or **Export to File…** to share the result.
 - **Apply to Inventory** takes each assigned skin off the inventory, ready for the next giveaway.

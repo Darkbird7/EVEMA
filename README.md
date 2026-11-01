@@ -4,7 +4,7 @@ EVEMA is a desktop settings manager for EVE Online. It reads your local settings
 
 EVEMA is a fan tool and is not affiliated with or endorsed by Fenris Creations (FC, formerly CCP Games). See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 
-![Local Files: window layout preview](docs/images/local-files-window-layout.png)
+![Characters: window layout preview](docs/images/local-files-window-layout.png)
 
 **What it does, in short:**
 
@@ -46,7 +46,7 @@ Grab the archive for your system from the [Releases page](../../releases). Every
 
 **Windows SmartScreen.** Windows may warn about an unrecognised app; choose **More info → Run anyway**.
 
-EVEMA looks for your EVE settings in the usual place for each system (including Steam/Proton and Wine prefixes on Linux). If yours lives elsewhere, pick the folder in EVEMA's Settings tab. Then follow [Getting started](docs/user-guide/getting-started.md).
+EVEMA looks for your EVE settings in the usual place for each system (including Steam/Proton and Wine prefixes on Linux). If yours lives elsewhere, pick the folder in EVEMA's Settings (the gear at the right end of the tabs). Then follow [Getting started](docs/user-guide/getting-started.md).
 
 ## Feedback
 
