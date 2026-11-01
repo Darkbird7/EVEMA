@@ -11,17 +11,21 @@ EVEMA is a fan project. It is not made, endorsed or supported by Fenris Creation
 - **Finds your settings.** It looks in the usual place on each system, including Steam/Proton and Wine prefixes on Linux. You can also point it at another folder. Characters are shown by name, and accounts by a name you choose. Once you pair each character with its account, the list shows which go together.
 - **Shows what's in them.** For each character and account, it shows:
   - window positions on a scaled canvas
+  - a summary of the overview tabs: each one's colour, bracket preset and columns
   - the ship label
+  - the probe formations
   - the character's public profile
 - **Copies settings between characters and accounts:**
+  - a ready-made choice: the window layout, the overview and brackets, the interface, or audio, camera and graphics
   - the whole file, to one character or to many at once
   - or only the sections you pick: window layout, overview tab presets, bracket presets, overview options, ship label
   - or groups of settings: the whole overview, probe formations, suppressed dialogs, audio, camera and graphics, market filters, module slots, window tab groups, Neocom, chat channels, info panels, docked panels and search history
   - sections and groups can go to one file or to many at once
-  - before anything is written, it shows you what will change
+  - before anything is written, it shows you what will change, and **Undo** puts the files back straight afterwards
+  - groups of characters and copies you repeat can be saved and run again; each run still shows every change first
 - **Exports and imports** a character's or account's settings as a JSON file you can keep or share, and exports an account's overview as the `.yaml` file the game's own Overview Settings can import.
 - **Moves a whole setup** to another computer: **Export everything** saves every settings file of every install and profile, with EVEMA's names and pairings (and its backups, if you like), in one checksummed `.zip`. **Import everything** shows what's new and what differs before writing anything.
-- **Edits settings directly:** the ship label, window positions, probe formations, and the "always show ship brackets" preference. Overview and bracket preset editing is hidden while it's reworked; those settings can still be copied.
+- **Edits settings directly:** the ship label, window positions, probe formations, and the "always show ship brackets" preference. Bracket presets can be edited too, from the Overview tab's **⋯** → **Edit presets…**; the overview itself is changed in the game, and EVEMA copies and shares it.
 - **Backs up before every change.** It makes a timestamped backup before it writes to any file, and you can restore any backup from the app, onto its own file or another of the same kind. You can also save named backups, which are kept until you delete them. Files are written in a way that can't leave a half-written file behind, even if something crashes mid-save.
 - **Waits for EVE to close.** The client saves its own settings when it logs out or closes, which would overwrite a change made while it was open (and a change only shows up at the next login anyway). So while any client is running, EVEMA holds each change back, shows it in a banner, and writes it once every client has closed, on top of whatever the client saved on its way out. **Write now** and **Discard** are in the banner, and EVEMA asks before quitting with changes still waiting.
 

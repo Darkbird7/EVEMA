@@ -1,6 +1,6 @@
 # EVEMA
 
-EVEMA is a desktop settings manager for EVE Online. It reads your local settings files and lets you preview and copy window layouts and overview settings between characters, restore automatic backups, and run the Partnership / giveaway tools against your combat logs. It runs on Windows, macOS and Linux.
+EVEMA is a desktop settings manager for EVE Online. It shows the settings files on your computer, grouped by account and character, copies them between your characters and accounts, edits window layouts, ship labels and probe formations, and backs up every file before it writes. It also keeps your community tools up to date, and lists the pilots in your combat logs for giveaways. It runs on Windows, macOS and Linux.
 
 EVEMA is a fan tool and is not affiliated with or endorsed by Fenris Creations (FC, formerly CCP Games). See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 
@@ -8,9 +8,11 @@ EVEMA is a fan tool and is not affiliated with or endorsed by Fenris Creations (
 
 **What it does, in short:**
 
-- See each character's window layout, ship label and public profile without logging in.
-- Copy a whole settings file, or just the sections you pick, from one character to one or many others, with a preview of every change first.
+- See every account with its characters beneath it, and each character's window layout, overview, ship label, probe formations and public profile, without logging in.
+- Copy settings in three steps: who gets them, then what (the window layout, the overview and brackets, the interface, the whole file, or sections you pick), to one character or many. Every change is shown before anything is written, and **Undo** puts the files back.
+- Save the characters you copy to as a group, and a copy you repeat as one click.
 - Edit window positions, ship labels and probe formations directly. Every change is backed up first and can be restored.
+- Move your whole setup to another computer in one checksummed archive.
 - Keep community tools such as EVE-O Preview and Pyfa installed, launched and up to date, with checksums verified.
 
 EVEMA never modifies the client, reads its memory or automates anything. See **[what EVEMA does and won't do](docs/what-evema-does.md)** for the full list, including exactly what it connects to.
@@ -20,8 +22,9 @@ EVEMA never modifies the client, reads its memory or automates anything. See **[
 
 | | |
 |---|---|
-| ![Ship labels](docs/images/local-files-ship-labels.png) | ![Probe formations](docs/images/probe-formations.png) |
-| ![Warning while EVE is running](docs/images/running-client-banner.png) | ![Tools](docs/images/tools.png) |
+| ![Copy settings: who gets them](docs/images/copy-settings-to.png) | ![Copy settings: what they get](docs/images/copy-settings-what.png) |
+| ![Overview summary](docs/images/local-files-overview.png) | ![Probe formation editor](docs/images/probe-formations.png) |
+| ![Changes held while EVE is running](docs/images/running-client-banner.png) | ![Tools](docs/images/tools.png) |
 
 </details>
 

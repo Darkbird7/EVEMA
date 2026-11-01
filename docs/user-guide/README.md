@@ -5,8 +5,8 @@ Step-by-step help for using EVEMA. If you haven't installed it yet, start with t
 ## Pages
 
 1. **[Getting started](getting-started.md)**: first launch, finding your settings, naming accounts and pairing each character with its account.
-2. **[Copying settings](copying-settings.md)**: copy a whole file to one character or many, copy only some sections or groups of settings (to one file or many), and export or import settings as a file.
-3. **[Editing settings](editing-settings.md)**: window positions, the ship label and probe formations.
+2. **[Copying settings](copying-settings.md)**: copy the window layout, the overview, the interface or the whole file to one character or many, save groups and copies you repeat, and export or import settings as a file.
+3. **[Editing settings](editing-settings.md)**: the overview summary, window positions, the ship label and probe formations.
 4. **[Backups, and changes while EVE is running](backups-and-eve-running.md)**: how EVEMA keeps your files safe, how to undo a change, and why it waits for EVE to close.
 5. **[Tools](tools.md)**: keep EVE-O Preview, Pyfa and other community tools installed, launched and up to date.
 6. **[Partnership](partnership.md)**: list the pilots from your combat logs and run a skin giveaway draw.

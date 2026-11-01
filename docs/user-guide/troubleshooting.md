@@ -10,7 +10,7 @@ Almost always, an EVE client was running. The client saves its own settings when
 
 See [Changes while EVE is running](backups-and-eve-running.md#changes-while-eve-is-running).
 
-## The Overview, Brackets or Ship Labels tab is empty for a character
+## The Overview, Ship Labels or Probe Formations tab is empty for a character
 
 Those settings live in the account file, so the character needs a [paired account](getting-started.md#3-pair-each-character-with-its-account). Click the **Not paired · Pair…** chip next to the character's name and pick its account.
 
@@ -26,7 +26,7 @@ The usual locations are:
 
 ## A character shows a number instead of a name
 
-Names come from EVE's public API, which only knows Tranquility characters. Singularity characters are looked up there too and marked **(via Tranquility)**; if one shows the wrong name, it was probably made on Singularity after the last copy from Tranquility. Thunderdome characters are shown by ID. Either way, right-click and **Rename Character…** to give it a name in EVEMA; your name always wins.
+Names come from EVE's public API, which only knows Tranquility characters. Singularity characters are looked up there too and marked **(via Tranquility)**; if one shows the wrong name, it was probably made on Singularity after the last copy from Tranquility. Thunderdome characters are shown by ID. Either way, select it and choose **⋯** → **Rename Character…** (or right-click it) to give it a name in EVEMA; your name always wins.
 
 ## I want to undo a change
 
