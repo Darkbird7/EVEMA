@@ -11,7 +11,8 @@ The ship label and probe formations live in the **account** file. If you select 
 The **Overview** tab lists the account's overview tabs, each with its colour, its bracket preset and its columns. Built-in presets are named in words, such as "Show All (built in)". You change your overview in the game; here you copy it and share it:
 
 - **Copy overview to…** opens [Copy settings](copying-settings.md#copy-settings) with **Overview and brackets** already chosen.
-- **Share for the game (.yaml)…** saves it as the same `.yaml` file the game's own Overview Settings export, for anyone to import in the client.
+- **Share ▾ → For the game (.yaml)…** saves it as the same `.yaml` file the game's own Overview Settings export, for anyone to import in the client.
+- **Share ▾ → As an EVEMA pack…** saves it as a [pack](copying-settings.md#overview-packs) other EVEMA players can apply to their accounts.
 - **Overview flags** (at the bottom, folded away) are the overview's on/off options.
 - **⋯ → Edit presets…** opens the bracket preset editor as its own tab, for anyone who wants to edit presets outside the game.
 
@@ -62,3 +63,29 @@ To change them, click **Edit…** (or right-click the account and choose **Probe
 **Keep formations centred.** In game, a formation is placed around the probes' current average position, not around your ship. So a formation whose probes don't average out on the ship drifts that far every time you apply it. Below the preview, EVEMA tells you how far off-centre a formation is, and **Balance** adds or moves one probe to centre it.
 
 If the file changes while the window is open, for example because EVE saved it when you logged out, EVEMA offers **Reload**. Closing with unsaved changes asks first.
+
+## Drone groups
+
+Drone groups are the folders in your drone bay and drones-in-space list. They live in the **account** file. Select an account, or a character paired with one, and open the **Drone Groups** tab to see its groups and how many drones each holds.
+
+![Drone Groups tab](../images/local-files-drone-groups.png)
+
+**Set up groups…** makes a group for each kind of drone you pick, named from its stats, for example `Hobgoblin | Therm | 20 dps | 4.2 km/s | 2.6 km`. The groups are made **empty**: you drag your drones into them in game, since only the game knows which drones you own. The wizard has four steps:
+
+1. **Accounts**: tick every account that should get the groups. The account you started from is ticked already, and each account shows how many groups it has now.
+2. **Families**: pick the drones, grouped as Light, Medium, Heavy, Sentry, Electronic warfare, Hybrid, Logistics and Industry. A family is one line of drones, such as Hobgoblin with its Tech I, Tech II and faction versions. The numbers are the Tech II drone's at all skills V, without ship, module or implant bonuses.
+
+   ![Picking drone families](../images/drone-groups-families.png)
+
+3. **Naming**: **Detailed**, **Compact**, **Plain**, or **Custom** with your own pattern. A pattern uses `{name}`, `{damage}`, `{dps}`, `{speed}`, `{range}` and `{effect}`, and must start with `{name}`. A part in square brackets drops out when a drone has nothing for it, so `{name}[ | {speed}]` gives a sentry no speed. The preview shows the names before anything is written.
+4. **Review**: what happens to each group on each account, then **Write groups**.
+
+   ![Reviewing the groups](../images/drone-groups-review.png)
+
+When you run it again, the drones that already have groups start ticked, and EVEMA finds its groups by their names:
+
+- A group for a drone you still pick is **renamed** to match the new style, and keeps its drones.
+- A group for a drone you no longer pick is **removed** only if it's empty. If it holds drones, it's **kept**.
+- Groups you made yourself, whose names don't start with a drone's name (such as `DPS` or `Logi`), are never touched.
+
+Every account is backed up first, and while EVE is running the groups wait until it closes, like any other change.

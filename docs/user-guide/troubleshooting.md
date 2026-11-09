@@ -42,7 +42,7 @@ The app isn't code-signed yet. Choose **More info → Run anyway**. You can chec
 
 ## A Linux AppImage tool won't start
 
-Mark it executable (`chmod +x Tool.AppImage`, or tick "Allow executing as program" in your file manager), then click **Launch** again.
+**Launch** marks an AppImage executable before starting it, but it can only do that for a file you own. If the message says to mark it executable, do it yourself (`chmod +x Tool.AppImage`, or tick "Allow executing as program" in your file manager), then click **Launch** again.
 
 ## Updating EVEMA
 

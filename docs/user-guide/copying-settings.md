@@ -11,6 +11,7 @@ Copying starts from the selected file in the **Characters** tab: click **Copy to
 | Make one or more characters look like another: windows, overview, interface, or all of it | [Copy settings](#copy-settings) |
 | Keep a copy of your setup, move it to another computer, or share it with a friend | [Export and Import](#export-and-import-a-settings-file) |
 | Share your overview in the game's own format, for anyone to import in the client | [In game (.yaml)](#export-your-overview-for-the-game) |
+| Share your bracket presets and overview options with other EVEMA players, or apply theirs to several accounts | [Overview packs](#overview-packs) |
 | Move everything to a new computer | [Export everything](#move-your-whole-setup-to-another-computer) |
 
 Copies only go between files of the same type: character to character, or account to account.
@@ -94,6 +95,22 @@ To apply one, select the file to change and choose **⋯** → **Import…** (or
 The **Ship Labels** tab has the same export under **Export ▾**, plus **Step by step (.txt)…**, which writes instructions for re-entering the label by hand in EVE's Ship Label editor.
 
 A few overview colours EVEMA can't match to the game's palette are left out; the status bar says which, and the game uses its default colour for them.
+
+## Overview packs
+
+A pack is a small `.evpack` file holding an overview setup: bracket presets, which preset each overview tab uses, the overview options and the ship label. It's for sharing with other EVEMA players, and for keeping a setup you apply to accounts again and again.
+
+**To make one**, select an account (or a character paired with one), open its **Overview** tab and choose **Share ▾ → As an EVEMA pack…**. Give it a name, the author name other players will see, and a version, then untick anything you'd rather leave out. Your account's name and IDs never go into a pack.
+
+**To use one**, choose **⋯ → Packs…** above the Characters list:
+
+![Packs window](../images/packs.png)
+
+- **Install pack…** checks a `.evpack` file and keeps a copy in EVEMA, so you can apply it again later without the file. A file that's damaged, changed since it was made, or holds anything other than overview settings is refused.
+- **Apply…** asks which accounts to apply it to (the selected one starts ticked), then **Review changes** shows every change for each account, as Import does. Each account is backed up first, and while EVE is running the changes wait until it closes.
+- **Remove** forgets an installed pack. The file you installed it from isn't touched.
+
+A pack holds only settings. EVEMA applies it with its own code, and nothing in a pack ever runs.
 
 ## Move your whole setup to another computer
 

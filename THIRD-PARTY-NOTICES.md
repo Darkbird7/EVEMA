@@ -73,8 +73,17 @@ was studied as prior art for feature scope and for its attribution trail. Facts
 EVEMA took from it, each checked against real settings files or in game: which
 settings keys make up each copy group, the probe formation axis convention (+x
 West, +y Up, +z North), the layouts of the Drifter and directional-stack probe
-presets, and its note that the client re-centres a formation on the probes'
-average position. No code from it is included in EVEMA.
+presets, its note that the client re-centres a formation on the probes'
+average position, and where drone groups are stored (`droneBlah2`) and the idea of
+naming them from a pattern. No code or data from it is included in EVEMA: the drone
+catalog and its stats come from the Static Data Export below.
+
+## Fenris Creations (formerly CCP Games) — Static Data Export
+
+The drone families and their stats in `EVEMA.Core/Settings/Drones/drone-catalog.json`
+are derived from Fenris Creations' [Static Data Export](https://developers.eveonline.com/docs/services/static-data/)
+by `tools/DroneCatalog`, under the developer licence EVEMA is registered with. The
+catalog names the SDE build it came from. The SDE itself is not distributed with EVEMA.
 
 ## Avalonia
 

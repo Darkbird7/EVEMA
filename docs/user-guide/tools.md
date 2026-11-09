@@ -6,7 +6,7 @@ EVEMA lists these tools; it doesn't vouch for them. Each built-in tool has a sho
 
 ## Built-in tools
 
-EVE-O Preview, Pyfa, EveLens and Priceall are listed out of the box. Most are Windows programs; where a tool doesn't run on your system, EVEMA says so instead of offering to launch it.
+EVE-O Preview (two forks of it, EveOPlus and Proopai), Pyfa, EveLens, Priceall, SMT and PELD are listed out of the box. Most are Windows programs; where a tool doesn't run on your system, EVEMA says so instead of offering to launch it.
 
 Select a tool on the left to see its details on the right. The main button under its name is the next thing to do: **Launch** once it's installed, or **Get latest…** if EVEMA can fetch it for you. Everything else is under the **⋯** button at the top right of the details.
 
@@ -15,7 +15,7 @@ Select a tool on the left to see its details on the right. The main button under
 EVEMA looks for each tool in the usual places. If it doesn't find yours, click **I already have it…**, then:
 
 - **Choose folder…** if you have the tool's folder.
-- **Choose program file…** to pick the program itself. Use this for a Linux `.AppImage`, which EVEMA accepts under any file name. (Mark the AppImage as executable first, or it won't start.)
+- **Choose program file…** to pick the program itself. Use this for a Linux `.AppImage`, which EVEMA accepts under any file name. If the AppImage isn't marked executable yet, **Launch** marks it for you.
 
 Under **⋯**, **Open folder** shows the tool's folder, and **Forget location** makes EVEMA forget it. Neither moves or changes the tool's files.
 
@@ -30,9 +30,11 @@ For tools published on GitHub:
 1. Click **Get latest…** (for an installed tool, **Update…** when there's a newer release, or **⋯** → **Get latest…**). EVEMA looks up the newest release and shows exactly what it would download. Nothing is downloaded yet.
 2. Click **Download and install** to go ahead.
 
-EVEMA checks the download against the SHA-256 checksum GitHub publishes, and refuses it if the two don't match or no checksum exists. It unpacks into its own tools folder and leaves your other versions alone.
+EVEMA checks the download against the SHA-256 checksum GitHub publishes, and refuses it if the two don't match or no checksum exists. It unpacks into its own tools folder and leaves your other versions alone. Each version gets its own folder, so for EVE-O Preview (EveOPlus) EVEMA copies your profiles into the new one. Your old version's folder isn't changed.
 
-**Check for updates** (top of the list) compares every installed tool with its latest release. It only looks; nothing is downloaded.
+**Check for updates** (top of the list) compares every installed tool with its latest release, and adds the release date to each tool's row. It only looks; nothing is downloaded.
+
+Not every tool can be fetched this way. **Get latest** isn't offered for a tool that publishes an installer rather than a zip, or one whose downloads have no checksum. Its **Notes** say what to do instead.
 
 ## Uninstall
 

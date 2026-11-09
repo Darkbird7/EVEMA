@@ -14,6 +14,7 @@ EVEMA is a fan project. It is not made, endorsed or supported by Fenris Creation
   - a summary of the overview tabs: each one's colour, bracket preset and columns
   - the ship label
   - the probe formations
+  - the drone groups, and how many drones each holds
   - the character's public profile
 - **Copies settings between characters and accounts:**
   - a ready-made choice: the window layout, the overview and brackets, the interface, or audio, camera and graphics
@@ -24,8 +25,10 @@ EVEMA is a fan project. It is not made, endorsed or supported by Fenris Creation
   - before anything is written, it shows you what will change, and **Undo** puts the files back straight afterwards
   - groups of characters and copies you repeat can be saved and run again; each run still shows every change first
 - **Exports and imports** a character's or account's settings as a JSON file you can keep or share, and exports an account's overview as the `.yaml` file the game's own Overview Settings can import.
+- **Makes and applies overview packs:** a small `.evpack` file of bracket presets, tab presets, overview options and the ship label, for sharing with other EVEMA players. Installing one checks it first, and applying one goes through the same review and backups as an import. A pack holds settings only, never anything that runs, and never your account's name or IDs.
 - **Moves a whole setup** to another computer: **Export everything** saves every settings file of every install and profile, with EVEMA's names and pairings (and its backups, if you like), in one checksummed `.zip`. **Import everything** shows what's new and what differs before writing anything.
 - **Edits settings directly:** the ship label, window positions, probe formations, and the "always show ship brackets" preference. Bracket presets can be edited too, from the Overview tab's **⋯** → **Edit presets…**; the overview itself is changed in the game, and EVEMA copies and shares it.
+- **Sets up drone groups** on one account or many: an empty group for each kind of drone you pick, named from its stats at all skills V (worked out from Fenris Creations' published static data, built into EVEMA). You drag your drones in, in game. Groups that hold drones are never removed, and groups you made yourself are never touched.
 - **Backs up before every change.** It makes a timestamped backup before it writes to any file, and you can restore any backup from the app, onto its own file or another of the same kind. You can also save named backups, which are kept until you delete them. Files are written in a way that can't leave a half-written file behind, even if something crashes mid-save.
 - **Waits for EVE to close.** The client saves its own settings when it logs out or closes, which would overwrite a change made while it was open (and a change only shows up at the next login anyway). So while any client is running, EVEMA holds each change back, shows it in a banner, and writes it once every client has closed, on top of whatever the client saved on its way out. **Write now** and **Discard** are in the banner, and EVEMA asks before quitting with changes still waiting.
 
@@ -35,7 +38,7 @@ EVEMA is a fan project. It is not made, endorsed or supported by Fenris Creation
 
 ### Tools tab
 
-- Keeps a list of community tools: a few built in (EVE-O Preview, Pyfa, EveLens, Priceall), plus any program you add yourself.
+- Keeps a list of community tools: a few built in (EVE-O Preview, Pyfa, EveLens, Priceall, SMT, PELD), plus any program you add yourself.
 - Finds where each one is installed, shows its version, and launches it when you click **Launch**. The tool runs as its own program, the same as if you had double-clicked it.
 - **Get latest** downloads a tool's newest release from its GitHub page, but only when you click, and only after showing you exactly what it will download. It checks the file's SHA-256 checksum against the one GitHub publishes and refuses the download if the two don't match or no checksum exists.
 - **Check for updates** compares the tools you have installed with their latest releases, only when you click.
@@ -44,7 +47,7 @@ EVEMA is a fan project. It is not made, endorsed or supported by Fenris Creation
 
 ## What it connects to
 
-- **ESI** (Fenris Creations' official public API, `esi.evetech.net`) and Fenris Creations' image server, for character names, public profiles, portraits and logos, and item group names. No login and no account access: only public information. Responses are cached and reused for as long as Fenris Creations allows.
+- **ESI** (Fenris Creations' official public API, `esi.evetech.net`) and Fenris Creations' image server, for character names, public profiles, portraits and logos, drone icons, and item group names. No login and no account access: only public information. Responses are cached and reused for as long as Fenris Creations allows.
 - **GitHub**, to check for a newer EVEMA release at startup (you can turn this off in Settings), to download that release when you click **Install and restart**, and for the Tools tab's Get latest and Check for updates buttons when you click them.
 
 Nothing else. EVEMA has no telemetry or analytics, and it never uploads your settings, logs or anything else.
