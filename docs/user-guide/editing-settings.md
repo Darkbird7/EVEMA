@@ -89,3 +89,5 @@ When you run it again, the drones that already have groups start ticked, and EVE
 - Groups you made yourself, whose names don't start with a drone's name (such as `DPS` or `Logi`), are never touched.
 
 Every account is backed up first, and while EVE is running the groups wait until it closes, like any other change.
+
+**Delete**, beside each group on the tab, removes that one group, whoever made it. The game itself has no way to remove a group. If the group holds drones, EVEMA says how many and asks first: the drones aren't deleted, they just aren't in a group any more. To get a deleted group back, [restore the backup](backups-and-eve-running.md#undo-a-change-restore-a-backup) taken just before.

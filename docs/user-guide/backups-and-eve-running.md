@@ -59,4 +59,4 @@ In the banner:
 
 ### When EVEMA can't see the client
 
-EVEMA spots a running client by its process name. That's confirmed on Windows and on Linux with Steam/Proton. On macOS, and in Wine setups other than Steam/Proton, EVEMA may not see the client; then changes are written straight away, as if EVE were closed. In that case, close every client yourself before making changes.
+EVEMA spots a running client by its process name, and on Linux also by its command line, for Wine builds that run the client under Wine's own name. That's confirmed on Windows and on Linux with Steam/Proton. On macOS and in other Wine setups it should work but isn't confirmed. If EVEMA doesn't see the client, changes are written straight away, as if EVE were closed. In that case, close every client yourself before making changes.

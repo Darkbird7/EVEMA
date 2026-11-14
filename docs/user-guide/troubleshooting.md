@@ -5,7 +5,7 @@
 Almost always, an EVE client was running. The client saves its own settings when it logs out, over the top of yours.
 
 - If EVEMA saw the client, your change waited in the banner and was written after the client closed. Check the **Activity** panel (bottom left) to see whether it was written.
-- If EVEMA didn't see the client (possible on macOS and in Wine setups other than Steam/Proton), the change was written straight away, then overwritten. Close every client and make the change again.
+- If EVEMA didn't see the client (possible on macOS and in unusual Wine setups), the change was written straight away, then overwritten. Close every client and make the change again.
 - A character's window layout is read when that character logs in. Log out to character selection and back in, or restart the client.
 
 See [Changes while EVE is running](backups-and-eve-running.md#changes-while-eve-is-running).
